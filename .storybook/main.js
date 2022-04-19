@@ -9,6 +9,7 @@ module.exports = {
 		'@storybook/addon-actions',
 		'@storybook/addon-interactions',
 		'@storybook/preset-create-react-app',
+		'@chakra-ui/storybook-addon',
 	],
 	framework: '@storybook/react',
 	core: {

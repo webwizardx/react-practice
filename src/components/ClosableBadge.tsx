@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { Badge, Close, Flex, Text } from "theme-ui"
+import { Badge, CloseButton, Flex, Text } from "@chakra-ui/react"
 
 type Props = {
     /**
@@ -19,22 +19,25 @@ const ClosableBadge = ({ children, onClick }: Props) => {
     return (
         <Flex sx={{ alignItems: 'center' }}>
             <Badge as='span'
-                sx={{ height: '24px', fontWeight: 1, borderRadius: 0, borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}
-                variant='filter'>
-                <Text color='success'>{children}</Text>
+                height={'24px'}
+                py={1}
+                px={2}
+                borderTopLeftRadius={'5px'}
+                borderBottomLeftRadius={'5px'}
+                bg='gray.200'>
+                <Text as={'span'} color={'success'}>{children}</Text>
             </Badge>
-            <Close sx={{
-                height: '24px',
-                borderRadius: 0,
-                borderTopRightRadius: '5px',
-                borderBottomRightRadius: '5px',
-                ':hover': {
-                    backgroundColor: 'darkerText',
+            <CloseButton
+                height={'24px'}
+                borderRadius={0}
+                borderTopRightRadius={'5px'}
+                borderBottomRightRadius={'5px'}
+                _hover={{
+                    backgroundColor: 'dark',
                     transition: 'background-color .2s'
-                }
-            }}
-                backgroundColor="success"
-                color="white"
+                }}
+                bg={'success'}
+                color={'white'}
                 onClick={onClick}
             />
         </Flex >

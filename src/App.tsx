@@ -1,4 +1,4 @@
-import { Box } from 'theme-ui';
+import { Box } from '@chakra-ui/react';
 import Jobs from './pages/Jobs';
 
 function App() {
